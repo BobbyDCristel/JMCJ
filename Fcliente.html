@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulario Cliente</title>
+  <style>
+    body {
+        margin: 0;
+        font-family: sans-serif;
+        font-size: 20px;
+        background: #ffffff;
+    }
+    
+    header {
+      background: #3678E9;
+      padding: 10px;
+      height: 60px;
+      width: 100%;
+      color: white;
+      text-align: center;
+    }
+    footer {
+        background-color: black;
+        color: #ffffff;
+        text-align: center;
+        position: relative;
+        margin-top: 20px;
+        clear: both;
+        margin: 20px;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: calc(100vh - 70px);
+    }
+    
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 800px;
+    }
+    
+    td, th {
+      padding: 20px;
+      border: 1px solid black;
+    }
+    
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+    
+    input[type="submit"] {
+      margin-top: 20px;
+      width: 100%;
+      padding: 15px;
+      background-color:#3678E9;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    
+    input[type="reset"] {
+      margin-top: 20px;
+      width: 100%;
+      padding: 15px;
+      background-color: #f44336;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    
+    h2 {
+      text-align: center;
+      font-family: "Tahoma";
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <h2><u>Datos De Cliente Compra en l&iacute;nea </u></h2>
+  </header>
+  
+  
+  <div class="container">
+    <h2>Ingrese sus Datos:</h2>
+    <form action="PCompra.html">
+      <table>
+        <tr>
+          <td><label for="first-name">Nombres:</label></td>
+          <td><input type="text" id="first-name" name="first-name" required></td>
+        </tr>
+        <tr>
+          <td><label for="last-name">Apellidos:</label></td>
+          <td><input type="text" id="last-name" name="last-name" required></td>
+        </tr>
+        <tr>
+          <td><label for="phone">Teléfono:</label></td>
+          <td><input type="text" id="phone" name="phone" pattern="[0-9]+" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required></td>
+        </tr>
+        <tr>
+          <td><label for="email">Correo:</label></td>
+          <td><input type="email" id="email" name="email" required></td>
+        </tr>
+        <tr>
+          <td><label for="address">Dirección:</label></td>
+          <td><input type="text" id="address" name="address" required></td>
+        </tr>
+        <tr>
+          <td><label for="house-number">Número de casa:</label></td>
+          <td><input type="text" id="house-number" name="house-number" pattern="[0-9]+" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required></td>
+        </tr>
+        <tr>
+          <td><label>Sexo:</label></td>
+          <td>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Masculino</label>
+          
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Femenino</label>
+          </td>
+        </tr>
+      </table>
+    
+      <div class="button-container">
+        <input type="submit" value="Siguiente"> 
+        <input type="reset" value="Borrar">
+      </div>
+    </form>
+  </div>
+</body>
+
+<footer>
+    <body>
+        <center><a href="jomc.html"><img src="E:\ims\tcBOBBY.jpg" width="320" height="200">  </center>
+        </body>
+</footer>
+
+
+</html>
